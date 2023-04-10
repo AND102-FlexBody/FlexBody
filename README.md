@@ -121,9 +121,12 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="wireframes.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
+<img src="digital_wireframes.png" width=600>
+
 ### [BONUS] Interactive Prototype
+
+<img src='interactivePrototype_walkthrough.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
