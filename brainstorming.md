@@ -49,7 +49,7 @@ Brainstorm! Each group member should record 3+ new app ideas in the HackMD, incl
     -    https://cloud.google.com/speech-to-text/docs/reference/rest
     -    https://cloud.ibm.com/apidocs/speech-to-text
 
-## Evaluating App Ideas
+## Evaluation of Top 3 App Ideas
 1. **Workout Manager**
     - **Category:** Health and Fitness
     - **Mobile:** Mobile is essential for posting, easy creation of lists, and camera use. Users will be able to take photos when exercising or at the gym and post to their feed. 
