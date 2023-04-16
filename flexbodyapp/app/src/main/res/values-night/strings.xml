@@ -1,8 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlexBody</string>
     <string name="home_nav_text">Home</string>
-    <string name="exercise_nav_text">Exercise</string>
     <string name="nutrition_nav_text">Nutrition</string>
-    <string name="personal_nav_text">Personal</string>
     <string name="feed_nav_text">Feed</string>
 </resources>

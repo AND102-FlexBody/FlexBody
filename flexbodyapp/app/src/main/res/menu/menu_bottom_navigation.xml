@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home_nav_text"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_exercise"
+        android:enabled="true"
+        android:icon="@drawable/baseline_dumbbell_24"
+        android:title="@string/exercise_nav_text"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_nutrition"
+        android:enabled="true"
+        android:icon="@drawable/baseline_nutrition_24"
+        android:title="@string/nutrition_nav_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_personal"
+        android:enabled="true"
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/personal_nav_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_feed"
+        android:enabled="true"
+        android:icon="@drawable/baseline_feed_24"
+        android:title="@string/feed_nav_text"
+        app:showAsAction="ifRoom" />
+</menu>
