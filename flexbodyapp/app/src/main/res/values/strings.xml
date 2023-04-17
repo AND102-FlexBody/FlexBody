@@ -5,6 +5,7 @@
     <string name="nutrition_nav_text">Nutrition</string>
     <string name="personal_nav_text">Personal</string>
     <string name="feed_nav_text">Feed</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exerciseNameDummyString">Jumping Jacks</string>
+    <string name="exerciseDescDummyString">You jump around a lot. Back and forth. Whoo.</string>
+    <string name="description">Description: </string>
 </resources>
