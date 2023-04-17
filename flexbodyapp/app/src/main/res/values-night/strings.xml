@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_nav_text">Home</string>
+    <string name="nutrition_nav_text">Nutrition</string>
+    <string name="feed_nav_text">Feed</string>
+</resources>
