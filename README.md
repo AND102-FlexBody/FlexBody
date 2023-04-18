@@ -132,4 +132,4 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 <img src='interactivePrototype_walkthrough.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
 
 ### Video Walkthrough (ON-GOING)
-<img src='flexbody_navbar-style.gif' title='Video Walkthrough' alt='Video Walkthrough' width='200/>
+<img src='flexbody_navbar-style.gif' title='Video Walkthrough' alt='Video Walkthrough' width='200 />
