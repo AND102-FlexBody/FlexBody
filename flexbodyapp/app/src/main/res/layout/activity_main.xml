@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,9 +21,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:backgroundTint="@color/columbia_blue"
-            app:itemPaddingBottom="@dimen/icon_pad"
             app:itemIconSize="@dimen/icon_size"
             app:itemIconTint="@color/azul"
+            app:itemPaddingBottom="@dimen/icon_pad"
             app:itemRippleColor="@color/flame"
             app:itemTextColor="@color/black_olive"
             app:layout_constraintBottom_toBottomOf="parent"

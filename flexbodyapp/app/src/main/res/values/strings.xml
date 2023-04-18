@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">FlexBody</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">tXq13hLFkyvKHhtHZoA1B2Bn9in0HHIAorJBDfdd</string>
+    <string name="back4app_client_key">Jy190KJKuWc1J7IW6enT7uZ669iiZNA9NbL4TA5e</string>
+
     <string name="home_nav_text">Home</string>
     <string name="exercise_nav_text">Exercise</string>
     <string name="nutrition_nav_text">Nutrition</string>
