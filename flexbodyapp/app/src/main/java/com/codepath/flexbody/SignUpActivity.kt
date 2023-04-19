@@ -41,6 +41,7 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        super.getSupportActionBar()?.hide()
         setContentView(R.layout.activity_sign_up)
 
         val registerButton: Button = findViewById(R.id.registerButton)

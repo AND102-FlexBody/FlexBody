@@ -1,6 +1,7 @@
 package com.codepath.flexbody
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding?.bottomNavigation?.selectedItemId = R.id.action_home
+        Log.d(TAG, "MainActivity onCreate() method called");
+
     }
 
     companion object {

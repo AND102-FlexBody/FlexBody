@@ -5,15 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 
 class SplashActivity  : AppCompatActivity() {
-
-    var handler = Handler().postDelayed({
-        val i = Intent(this@SplashActivity, LoginActivity::class.java)
-        startActivity(i)
-    }, 1400)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        super.getSupportActionBar()?.hide()
         setContentView(R.layout.activity_splash)
+        Log.d("SplashActivity", "Splash activity loaded.")
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 1400)
     }
+
 }
