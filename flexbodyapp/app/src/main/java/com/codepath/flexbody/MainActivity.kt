@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.codepath.flexbody.databinding.ActivityMainBinding
+import com.codepath.flexbody.fragments.*
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
