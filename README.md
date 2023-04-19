@@ -28,8 +28,8 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 
 **Required Features**
 
-* [ ] [R1] User can register an account
-* [ ] [R2] Users will be able to log in
+* [x] [R1] User can register an account
+* [x] [R2] Users will be able to log in
 * [ ] [R3] User sees a home screen with a bottom navigation menu
     * [ ] Home screen is stylized
     * [x] Navigation menu is stylized
@@ -47,7 +47,7 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 
 **Stretch Features**
 
-* [ ] [S1] Users will see a splash screen when app is booted
+* [x] [S1] Users will see a splash screen when app is booted
 * [ ] [S2] Users will receive a daily notification to check the app
 * [ ] [S3] Users will like or "flex" images or exercise lists
 * [ ] [S4] Users will can save other users exercise lists
@@ -130,3 +130,11 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 ### [BONUS] Interactive Prototype
 
 <img src='interactivePrototype_walkthrough.gif' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+
+### Build Progress: Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+| Milestone #2: April 17, 2023 | Milestone #3: April 24, 2023 | Milestone #4: May 1, 2023 |
+| --- | --- | --- | 
+| <img src='milestone1_walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' width='200' />|  |  | 
