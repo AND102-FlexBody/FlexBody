@@ -12,7 +12,7 @@
         tools:listitem="@layout/item_exercise" />
 
     <androidx.core.widget.ContentLoadingProgressBar
-        android:id="@+id/searchProgressBar"
+        android:id="@+id/exerciseSearchProgressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
