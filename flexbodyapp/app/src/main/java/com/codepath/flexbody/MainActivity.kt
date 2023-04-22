@@ -7,6 +7,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.codepath.flexbody.databinding.ActivityMainBinding
 import com.codepath.flexbody.fragments.*
+import kotlinx.serialization.json.Json
+
+fun createJson() = Json {
+    isLenient = true
+    ignoreUnknownKeys = true
+    useAlternativeNames = false
+}
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null

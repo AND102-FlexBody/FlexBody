@@ -7,19 +7,29 @@ import kotlinx.serialization.Serializable
 @Keep
 @Serializable
 data class ExerciseSearchResponse(
-    @SerialName("results")
-    val response: List<ExerciseWger>?
+    @SerialName("suggestions")
+    val suggestions: List<BaseResponse>?
+)
+
+@Keep
+@Serializable
+data class BaseResponse(
+    @SerialName("value")
+    val value: String?,
+    @SerialName("data")
+    val data: ExerciseWger?
+
 )
 
 @Keep
 @Serializable
 data class ExerciseWger(
+    @SerialName("id")
+    val id: Int?,
     @SerialName("name")
     val name: String?,
-    @SerialName("description")
-    val description: String?,
-    @SerialName("id")
-    val id: Long?,
     @SerialName("category")
-    val category: Int?,
+    val category: String?,
+    @SerialName("image")
+    val image: String?,
 )
