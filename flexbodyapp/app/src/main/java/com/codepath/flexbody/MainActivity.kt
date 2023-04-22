@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding?.bottomNavigation?.selectedItemId = R.id.action_home
-        Log.d(TAG, "MainActivity onCreate() method called");
+        Log.d(TAG, "MainActivity onCreate() method called")
 
     }
 

@@ -2,17 +2,16 @@ package com.codepath.flexbody
 
 import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.parse.ParseUser
-import com.parse.ParseException
-import com.parse.SignUpCallback
 
 private const val TAG = "SignUpActivity"
+
 class SignUpActivity : AppCompatActivity() {
     private fun openActivityMain() {
         val intent = Intent(this, MainActivity::class.java)
@@ -20,11 +19,11 @@ class SignUpActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun signUpUser(username:String, email:String, password:String, age:String){
-        Log.i(ContentValues.TAG, "Attempting to sign in user $username");
+    private fun signUpUser(username: String, email: String, password: String, age: String) {
+        Log.i(ContentValues.TAG, "Attempting to sign in user $username")
         val user = ParseUser()
-        user.setUsername(username)
-        user.setEmail(email)
+        user.username = username
+        user.email = email
         user.setPassword(password)
         user.put("Age", "$age")
 
@@ -50,7 +49,7 @@ class SignUpActivity : AppCompatActivity() {
         val email: EditText = findViewById(R.id.signUpEmail)
         val age: EditText = findViewById(R.id.signUpAge)
 
-        registerButton.setOnClickListener{
+        registerButton.setOnClickListener {
             Log.d(ContentValues.TAG, "onClick register Button")
             val thisUsername = username.text.toString()
             val thisEmail = email.text.toString()

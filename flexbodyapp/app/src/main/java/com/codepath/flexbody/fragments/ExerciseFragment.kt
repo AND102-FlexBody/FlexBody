@@ -11,10 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
-import com.codepath.flexbody.ExerciseSearchResponse
-import com.codepath.flexbody.ExerciseWger
-import com.codepath.flexbody.R
-import com.codepath.flexbody.createJson
+import com.codepath.flexbody.*
 import okhttp3.Headers
 import org.json.JSONException
 import org.json.JSONObject
@@ -78,6 +75,9 @@ class ExerciseFragment : Fragment() {
                                 exercisesToDisplay.addAll(listOf(completeExercise))
                                 Log.d(TAG, exercisesToDisplay.toString())
                                 Log.d(TAG, "finally succ")
+                                exercisesSearchRV.adapter =
+                                    view?.let { ExerciseAdapter(it.context, exercisesToDisplay) }
+
                             },
                             onFailure = { errorMessage ->
                                 Log.d(TAG, "\nExercise in inner on failure: $errorMessage\n")
@@ -151,15 +151,14 @@ class ExerciseFragment : Fragment() {
         client["${EXERCISE_DESCRIPTION_SEARCH_URL}${exercise.id}/", params,
                 object :
                     JsonHttpResponseHandler() {
-
                     override fun onSuccess(
                         statusCode: Int, headers: Headers, json: JSON
                     ) {
+                        searchProgressBar.hide()
                         val resultsJSON: JSONObject = json.jsonObject as JSONObject
                         val exerciseRawDesc: String = resultsJSON.get("description").toString()
                         val completeExercise: Pair<ExerciseWger, String> =
                             Pair(exercise, exerciseRawDesc)
-                        Log.d(TAG, completeExercise.toString())
                         Log.d(TAG, "getExercise info -- response successful")
                         onSuccess(completeExercise)
                     }
