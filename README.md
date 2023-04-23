@@ -36,8 +36,8 @@ FlexBody is a mobile fitness application that allows users to track exercise and
     * [x] Bottom navigation links to respective fragments
 * [ ] [R4] User can submit pictures of them exercising
 * [ ] [R5] User can search for exercises to add to exercise list
-    * [ ] Create exercise list fragment (search for exercises)
-    * [ ] API returns exercises from Public endpoint
+    * [x] Create exercise list fragment (search for exercises)
+    * [x] API returns exercises from Public endpoint
 * [ ] [R6] Users have a personal feed
     * [ ] Users can see the titles of their created lists
     * [ ] Users can see their image uploads
