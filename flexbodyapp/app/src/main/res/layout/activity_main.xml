@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_olive"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -20,12 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:backgroundTint="@color/columbia_blue"
+            app:backgroundTint="@color/black"
             app:itemIconSize="@dimen/icon_size"
-            app:itemIconTint="@color/azul"
+            app:itemIconTint="@color/princeton_orange"
             app:itemPaddingBottom="@dimen/icon_pad"
             app:itemRippleColor="@color/flame"
-            app:itemTextColor="@color/black_olive"
+            app:itemTextColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

@@ -15,6 +15,7 @@ import com.codepath.flexbody.*
 import okhttp3.Headers
 import org.json.JSONException
 import org.json.JSONObject
+import org.jsoup.Jsoup
 
 
 class ExerciseFragment : Fragment() {
@@ -36,7 +37,7 @@ class ExerciseFragment : Fragment() {
         item.setOnQueryTextListener(object :
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                updateAdapter(query, searchProgressBar, exercisesSearchRV)
+                updateAdapter(query)
                 return false
             }
 
@@ -53,6 +54,8 @@ class ExerciseFragment : Fragment() {
         activity?.title = getString(R.string.action_bar_search)
         searchProgressBar =
             view.findViewById<View>(R.id.exerciseSearchProgressBar) as ContentLoadingProgressBar
+        searchProgressBar.hide()
+
         exercisesSearchRV = view.findViewById<View>(R.id.exerciseSearchList) as RecyclerView
         val context = view.context
         exercisesSearchRV.layoutManager = LinearLayoutManager(context)
@@ -60,9 +63,8 @@ class ExerciseFragment : Fragment() {
     }
 
     private fun updateAdapter(
-        searchQuery: String, progressBar: ContentLoadingProgressBar, recyclerView: RecyclerView
+        searchQuery: String
     ) {
-        progressBar.show()
         val exercisesToDisplay = mutableListOf<Pair<ExerciseWger, String>>()
         searchExercisesByName(searchQuery,
             onSuccess = { exercises ->
@@ -73,24 +75,26 @@ class ExerciseFragment : Fragment() {
                         val exercise = getExerciseCompleteInfo(exercises[i],
                             onSuccess = { completeExercise ->
                                 exercisesToDisplay.addAll(listOf(completeExercise))
-                                Log.d(TAG, exercisesToDisplay.toString())
-                                Log.d(TAG, "finally succ")
                                 exercisesSearchRV.adapter =
                                     view?.let { ExerciseAdapter(it.context, exercisesToDisplay) }
+                                searchProgressBar.hide()
 
                             },
                             onFailure = { errorMessage ->
                                 Log.d(TAG, "\nExercise in inner on failure: $errorMessage\n")
+                                searchProgressBar.hide()
 
                             })
                         Log.d(TAG, "\nExercise: $exercise\n")
                     }
                 } else {
                     Toast.makeText(context, "No exercises found.", Toast.LENGTH_SHORT).show()
+                    searchProgressBar.hide()
                 }
             },
             onFailure = { errorMessage ->
                 Log.d(TAG, "\nExercise: $errorMessage\n")
+                searchProgressBar.hide()
 
             }
         )
@@ -106,6 +110,7 @@ class ExerciseFragment : Fragment() {
 
         params[TERM_PARAM] = name
         params[SEARCH_LIMIT_PARAM] = SEARCH_LIMIT.toString()
+        searchProgressBar.show()
 
         client[EXERCISE_SEARCH_URL, params, object : JsonHttpResponseHandler() {
 
@@ -118,14 +123,13 @@ class ExerciseFragment : Fragment() {
                     )
                     parsedJson.suggestions?.let { list ->
                         exercises.addAll(list.mapNotNull { it.data })
-                        Log.d(TAG, "searchExercisesByName -- $exercises")
                         onSuccess(exercises)
                     }
                 } catch (e: JSONException) {
                     onFailure("Exception: $e")
-                    Log.e(TAG, "searchExercisesByName -- Exception: $e")
                 }
                 Log.d(TAG, "searchExercisesByName -- response successful")
+                searchProgressBar.hide()
             }
 
             override fun onFailure(
@@ -146,7 +150,6 @@ class ExerciseFragment : Fragment() {
         val client = AsyncHttpClient()
         val params = RequestParams()
         params[SEARCH_LIMIT_PARAM] = SEARCH_LIMIT.toString()
-        Log.d(TAG, "${EXERCISE_DESCRIPTION_SEARCH_URL}${exercise.id}/")
 
         client["${EXERCISE_DESCRIPTION_SEARCH_URL}${exercise.id}/", params,
                 object :
@@ -156,9 +159,13 @@ class ExerciseFragment : Fragment() {
                     ) {
                         searchProgressBar.hide()
                         val resultsJSON: JSONObject = json.jsonObject as JSONObject
-                        val exerciseRawDesc: String = resultsJSON.get("description").toString()
+                        val exerciseRawDesc = resultsJSON.get("description")
+                        val doc = Jsoup.parse(exerciseRawDesc as String)
+                        val exerciseDesc = doc.select("p").text()
+
+                        Log.d(TAG, exerciseDesc)
                         val completeExercise: Pair<ExerciseWger, String> =
-                            Pair(exercise, exerciseRawDesc)
+                            Pair(exercise, exerciseDesc)
                         Log.d(TAG, "getExercise info -- response successful")
                         onSuccess(completeExercise)
                     }
