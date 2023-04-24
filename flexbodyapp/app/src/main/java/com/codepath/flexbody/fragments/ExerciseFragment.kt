@@ -3,6 +3,8 @@ package com.codepath.flexbody.fragments
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.view.View.INVISIBLE
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.widget.ContentLoadingProgressBar
 import androidx.fragment.app.Fragment
@@ -21,6 +23,8 @@ import org.jsoup.Jsoup
 class ExerciseFragment : Fragment() {
     private lateinit var searchProgressBar: ContentLoadingProgressBar
     private lateinit var exercisesSearchRV: RecyclerView
+    private lateinit var emptySearchText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -55,7 +59,7 @@ class ExerciseFragment : Fragment() {
         searchProgressBar =
             view.findViewById<View>(R.id.exerciseSearchProgressBar) as ContentLoadingProgressBar
         searchProgressBar.hide()
-
+        emptySearchText =  view.findViewById<View>(R.id.emptySearch) as TextView
         exercisesSearchRV = view.findViewById<View>(R.id.exerciseSearchList) as RecyclerView
         val context = view.context
         exercisesSearchRV.layoutManager = LinearLayoutManager(context)
@@ -66,6 +70,7 @@ class ExerciseFragment : Fragment() {
         searchQuery: String
     ) {
         val exercisesToDisplay = mutableListOf<Pair<ExerciseWger, String>>()
+        emptySearchText.visibility = INVISIBLE
         searchExercisesByName(searchQuery,
             onSuccess = { exercises ->
                 if (exercises.isNotEmpty()) {
@@ -165,7 +170,7 @@ class ExerciseFragment : Fragment() {
                         if (exerciseDesc.isEmpty()) {
                             exerciseDesc = "No description found."
                         }
-                        Log.d(TAG, exerciseDesc)
+                        //Log.d(TAG, exerciseDesc)
                         val completeExercise: Pair<ExerciseWger, String> =
                             Pair(exercise, exerciseDesc)
                         Log.d(TAG, "getExercise info -- response successful")

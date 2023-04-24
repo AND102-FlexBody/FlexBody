@@ -16,5 +16,6 @@
     <string name="description">Description: </string>
     <string name="action_bar_search">Exercise Search</string>
     <string name="add_to_list">Add to List</string>
+    <string name="search_exercises_using_the_searchbar_results_will_display_here">Search exercises using the searchbar. Results will display here.</string>
 
 </resources>
