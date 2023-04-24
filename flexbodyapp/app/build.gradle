@@ -54,4 +54,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
     implementation 'com.codepath.libraries:asynchttpclient:2.2.0'
     implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
 }

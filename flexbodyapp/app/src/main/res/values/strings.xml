@@ -17,5 +17,8 @@
     <string name="action_bar_search">Exercise Search</string>
     <string name="add_to_list">Add to List</string>
     <string name="search_exercises_using_the_searchbar_results_will_display_here">Search exercises using the searchbar. Results will display here.</string>
+    <string name="my_personal_exercise_plan">My Personal Exercise Plan</string>
+    <string name="my_personal_nutrition_plan">My Personal Nutrition Plan</string>
+    <string name="profile">Profile</string>
 
 </resources>

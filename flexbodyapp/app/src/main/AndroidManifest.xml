@@ -41,6 +41,10 @@
 
         </activity>
 
+        <activity
+            android:name=".MyPlanExerciseDetail"
+            android:exported="true" />
+
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
