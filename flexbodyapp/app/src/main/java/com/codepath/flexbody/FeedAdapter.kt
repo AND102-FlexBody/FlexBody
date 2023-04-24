@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import java.text.SimpleDateFormat
 
 class FeedAdapter(val context: Context, val posts: List<Post>) :
     RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
@@ -38,7 +39,10 @@ class FeedAdapter(val context: Context, val posts: List<Post>) :
 
         fun bind(post: Post) {
             tvDescription.text = post.getDescription()
-            tvUserName.text = post.getUser()?.username
+            val format = SimpleDateFormat("MMMM d, yyyy")
+            val dateString =
+                format.format(post.createdAt) // Returns a string in the format 'yyyy-MM-dd'
+            tvUserName.text = "By ${post.getUser()?.username} on ${dateString}"
 
             Glide.with(itemView.context).load(post.getImage()?.url).into(ivImage)
 

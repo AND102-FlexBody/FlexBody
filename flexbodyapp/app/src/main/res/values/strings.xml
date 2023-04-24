@@ -21,5 +21,11 @@
     <string name="my_personal_nutrition_plan">My Personal Nutrition Plan</string>
     <string name="profile">Profile</string>
     <string name="take_a_picture">Take a Picture</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="save">Save</string>
+    <string name="ex_my_workout">Ex. My workout</string>
+    <string name="comment">Comment</string>
+    <string name="by_flexbodyuser_on_june_14_2023">By FlexBodyUser on June 14, 2023</string>
+    <string name="this_is_a_great_post">This is a great post!</string>
 
 </resources>
