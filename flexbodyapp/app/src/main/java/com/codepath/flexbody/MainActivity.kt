@@ -6,6 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.codepath.flexbody.databinding.ActivityMainBinding
+import com.codepath.flexbody.fragments.*
+import kotlinx.serialization.json.Json
+
+fun createJson() = Json {
+    isLenient = true
+    ignoreUnknownKeys = true
+    useAlternativeNames = false
+}
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
@@ -36,11 +44,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding?.bottomNavigation?.selectedItemId = R.id.action_home
-        Log.d(TAG, "MainActivity onCreate() method called");
+        Log.d(TAG, "MainActivity onCreate() method called")
 
     }
 
     companion object {
-        private val TAG = "MainActivity/"
+        private const val TAG = "MainActivity/"
     }
 }

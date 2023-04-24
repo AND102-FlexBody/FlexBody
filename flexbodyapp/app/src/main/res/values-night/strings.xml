@@ -3,4 +3,5 @@
     <string name="home_nav_text">Home</string>
     <string name="nutrition_nav_text">Nutrition</string>
     <string name="feed_nav_text">Feed</string>
+    <string name="action_bar_search">Search</string>
 </resources>

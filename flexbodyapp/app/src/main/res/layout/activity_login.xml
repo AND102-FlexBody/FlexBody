@@ -5,14 +5,14 @@
     android:background="@drawable/fitness_gradient"
     android:paddingStart="16dp"
     android:paddingTop="16dp"
-    android:paddingEnd="16dp" >
+    android:paddingEnd="16dp">
 
     <TextView
         android:id="@+id/textViewTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
         android:text="Hello Again!"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewTitle1"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:text="Welcome back"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -34,33 +34,33 @@
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:inputType="textVisiblePassword|textNoSuggestions"
         android:layout_below="@id/textViewTitle2"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:hint="Username"
+        android:inputType="textVisiblePassword|textNoSuggestions" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
         android:layout_below="@id/editTextUsername"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign in"
         android:layout_below="@id/editTextPassword"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:text="Sign in" />
 
     <Button
         android:id="@+id/textViewSignUp"
