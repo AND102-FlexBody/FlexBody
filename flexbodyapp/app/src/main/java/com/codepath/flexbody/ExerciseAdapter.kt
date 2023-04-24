@@ -22,7 +22,6 @@ class ExerciseAdapter(
     private val exercises: MutableList<Pair<ExerciseWger, String>>
 ) :
     RecyclerView.Adapter<ExerciseAdapter.ViewHolder>() {
-    private val radius = 30
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_exercise, parent, false)
         return ViewHolder(view)

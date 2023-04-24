@@ -59,7 +59,7 @@ class ExerciseFragment : Fragment() {
         searchProgressBar =
             view.findViewById<View>(R.id.exerciseSearchProgressBar) as ContentLoadingProgressBar
         searchProgressBar.hide()
-        emptySearchText =  view.findViewById<View>(R.id.emptySearch) as TextView
+        emptySearchText = view.findViewById<View>(R.id.emptySearch) as TextView
         exercisesSearchRV = view.findViewById<View>(R.id.exerciseSearchList) as RecyclerView
         val context = view.context
         exercisesSearchRV.layoutManager = LinearLayoutManager(context)

@@ -14,7 +14,7 @@ class ParseApplication : Application() {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
 //    ParseObject.registerSubclass(StreamMuscle::class.java);
         ParseObject.registerSubclass(Exercise::class.java)
-
+        ParseObject.registerSubclass(Post::class.java)
 
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         builder.networkInterceptors().add(httpLoggingInterceptor)
