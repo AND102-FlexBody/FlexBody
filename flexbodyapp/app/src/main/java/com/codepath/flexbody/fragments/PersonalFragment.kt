@@ -23,9 +23,9 @@ class PersonalFragment : Fragment() {
         activity?.title = "My Plan"
 
         // My Plan Exercise Recycler view
-        myPlanExercisesRV = view.findViewById<View>(R.id.myPlanExercisesRV) as RecyclerView
-        val context = view.context
-        myPlanExercisesRV.layoutManager = LinearLayoutManager(context)
+        //myPlanExercisesRV = view.findViewById<View>(R.id.myPlanExercisesRV) as RecyclerView
+        // val context = view.context
+        //myPlanExercisesRV.layoutManager = LinearLayoutManager(context)
 
 
         // TODO: if we add nutrition my plan recyclerview, it goes here
