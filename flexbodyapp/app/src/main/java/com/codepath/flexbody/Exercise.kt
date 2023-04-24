@@ -23,12 +23,20 @@ class Exercise : ParseObject() {
         put(KEY_IMAGE, parseFile)
     }
 
-    fun getName(): ParseUser? {
-        return getParseUser(KEY_NAME)
+    fun getName(): String? {
+        return getString(KEY_NAME)
     }
 
-    fun setName(user: ParseUser) {
+    fun setName(user: String) {
         put(KEY_NAME, user)
+    }
+
+    fun getUser(): ParseUser? {
+        return getParseUser(KEY_USER)
+    }
+
+    fun setUser(user: ParseUser) {
+        put(KEY_USER, user)
     }
 
 
@@ -36,5 +44,6 @@ class Exercise : ParseObject() {
         const val KEY_DESCRIPTION = "description"
         const val KEY_IMAGE = "image"
         const val KEY_NAME = "name"
+        const val KEY_USER = "user"
     }
 }

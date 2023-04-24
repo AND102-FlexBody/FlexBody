@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/exercise_result"
     android:layout_marginBottom="108dp"
-    android:padding="10dp"
-    >
+    android:background="@drawable/exercise_result"
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/exerciseImage"
@@ -15,39 +14,54 @@
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/white"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/exerciseDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exerciseName"
-        tools:srcCompat="@tools:sample/avatars"
-        android:background="@color/white"/>
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/exerciseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/fjalla_one"
         android:text="@string/exerciseNameDummyString"
+        android:textColor="@color/black_olive"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/exerciseImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black_olive"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/exerciseDescription"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:text="@string/exerciseDescDummyString"
+        android:textColor="@color/black_olive"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseImage" />
+
+    <Button
+        android:id="@+id/saveExerciseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/turkey_red"
+        android:fontFamily="@font/fjalla_one"
+        android:text="@string/add_to_list"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseImage"
-        app:layout_constraintBottom_toTopOf="@+id/exerciseName"
-        android:textColor="@color/black_olive"
-        android:textSize="20sp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintHorizontal_bias="0.648"/>
+        app:layout_constraintTop_toBottomOf="@+id/exerciseDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>

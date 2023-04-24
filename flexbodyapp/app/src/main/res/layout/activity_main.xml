@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_olive"
+    android:background="@color/timberwolf"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -21,18 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:backgroundTint="@color/black"
+            app:backgroundTint="@color/lavender_blush"
             app:itemIconSize="@dimen/icon_size"
-            app:itemIconTint="@color/princeton_orange"
+            app:itemIconTint="@color/turkey_red"
             app:itemPaddingBottom="@dimen/icon_pad"
             app:itemRippleColor="@color/flame"
-            app:itemTextColor="@color/white"
+            app:itemTextColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
             app:menu="@menu/menu_bottom_navigation" />
     </RelativeLayout>
 

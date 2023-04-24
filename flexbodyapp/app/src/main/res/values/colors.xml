@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="indigo_dye">#004777</color>
-    <color name="turkey_red">#A30000</color>
+    <color name="turkey_red">#E71D36</color>
     <color name="safety_orange">#FF7700</color>
     <color name="peach_yellow">#EFD28D</color>
     <color name="verdigris">#00AFB5</color>
@@ -19,4 +19,11 @@
     <color name="princeton_orange">#FF9505</color>
     <color name="azul">#016FB9</color>
     <color name="columbia_blue">#C8E0F4</color>
+    <color name="anti_white">#F1F2F6</color>
+    <color name="ghost_white">#F7F5FB</color>
+    <color name="tangerine">#F58A07</color>
+    <color name="cool_gray">#909CC2</color>
+    <color name="lavender_blush">#EEE5E9</color>
+    <color name="timberwolf">#D7D9CE</color>
+
 </resources>

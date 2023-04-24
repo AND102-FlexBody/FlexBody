@@ -161,8 +161,10 @@ class ExerciseFragment : Fragment() {
                         val resultsJSON: JSONObject = json.jsonObject as JSONObject
                         val exerciseRawDesc = resultsJSON.get("description")
                         val doc = Jsoup.parse(exerciseRawDesc as String)
-                        val exerciseDesc = doc.select("p").text()
-
+                        var exerciseDesc = doc.select("p").text()
+                        if (exerciseDesc.isEmpty()) {
+                            exerciseDesc = "No description found."
+                        }
                         Log.d(TAG, exerciseDesc)
                         val completeExercise: Pair<ExerciseWger, String> =
                             Pair(exercise, exerciseDesc)

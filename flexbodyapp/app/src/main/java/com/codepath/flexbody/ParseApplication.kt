@@ -13,6 +13,8 @@ class ParseApplication : Application() {
         val builder = OkHttpClient.Builder()
         val httpLoggingInterceptor = HttpLoggingInterceptor()
 //    ParseObject.registerSubclass(StreamMuscle::class.java);
+        ParseObject.registerSubclass(Exercise::class.java)
+
 
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         builder.networkInterceptors().add(httpLoggingInterceptor)
