@@ -27,5 +27,6 @@
     <string name="comment">Comment</string>
     <string name="by_flexbodyuser_on_june_14_2023">By FlexBodyUser on June 14, 2023</string>
     <string name="this_is_a_great_post">This is a great post!</string>
+    <string name="log_out">Log Out</string>
 
 </resources>
