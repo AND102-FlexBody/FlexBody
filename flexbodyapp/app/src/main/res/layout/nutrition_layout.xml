@@ -3,28 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="wrap_content">
 
 
     <ImageView
+        android:background="@drawable/imageview_border"
         android:id="@+id/nutritionImage"
         android:layout_width="146dp"
         android:layout_height="131dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nutritionItem"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:srcCompat="@drawable/nutrition_filled_25" />
 
     <TextView
         android:id="@+id/nutritionItem"
         android:layout_width="83dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -38,25 +41,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="59dp" />
-
-    <TextView
-        android:id="@+id/caloriesLabel"
-        android:layout_width="66dp"
-        android:layout_height="31dp"
-        android:text="Calories"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <TextView
-        android:id="@+id/caloriesVal"
-        android:layout_width="58dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="44dp"
-        app:layout_constraintBottom_toBottomOf="@+id/caloriesLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/caloriesLabel"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintGuide_begin="26dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,4 +16,6 @@
     <string name="app_label">flexbodyapp</string>
     <string name="search_hint">Food</string>
     <string name="nutrition_hint">Search Nutrition Info</string>
+    <string name="calories">Calories</string>
+    <string name="protein">Protein</string>
 </resources>
