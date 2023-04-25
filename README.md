@@ -6,6 +6,7 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 
+**🧠 Brainstorming**：https://github.com/AND102-FlexBody/FlexBody/blob/main/brainstorming.md
 
 **🎥 Demo Video link:** https://youtu.be/lqTYdpPZ5eA 
 
