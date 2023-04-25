@@ -28,5 +28,10 @@
     <string name="by_flexbodyuser_on_june_14_2023">By FlexBodyUser on June 14, 2023</string>
     <string name="this_is_a_great_post">This is a great post!</string>
     <string name="log_out">Log Out</string>
+    <string name="upload">Upload</string>
+    <string name="username">Username:</string>
+    <string name="email">Email:</string>
+    <string name="flexbodyuser">FlexBodyUser</string>
+    <string name="flexbody_gmail_com">flexbody@gmail.com</string>
 
 </resources>

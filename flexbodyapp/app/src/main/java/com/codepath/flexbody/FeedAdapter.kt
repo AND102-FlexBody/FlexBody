@@ -12,12 +12,12 @@ import java.text.SimpleDateFormat
 
 class FeedAdapter(val context: Context, val posts: List<Post>) :
     RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_post, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: FeedAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val post = posts.get(position)
         holder.bind(post)
     }
