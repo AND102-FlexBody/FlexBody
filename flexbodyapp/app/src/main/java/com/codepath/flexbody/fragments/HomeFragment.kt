@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.codepath.flexbody.ProfileActivity
 import com.codepath.flexbody.R
@@ -24,6 +25,9 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        view.findViewById<TextView>(R.id.homeText).text =
+            "Welcome, ${ParseUser.getCurrentUser()?.username}!"
 
         view.findViewById<Button>(R.id.logOutButton).setOnClickListener {
             ParseUser.logOut()

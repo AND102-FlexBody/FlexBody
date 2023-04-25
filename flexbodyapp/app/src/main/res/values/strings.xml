@@ -33,5 +33,6 @@
     <string name="email">Email:</string>
     <string name="flexbodyuser">FlexBodyUser</string>
     <string name="flexbody_gmail_com">flexbody@gmail.com</string>
+    <string name="welcome_flexbodyuser">Welcome, FlexBodyUser!</string>
 
 </resources>
