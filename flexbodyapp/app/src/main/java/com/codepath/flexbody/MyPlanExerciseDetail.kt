@@ -16,16 +16,15 @@ class MyPlanExerciseDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.exercise_plan_detail)
+        // Get the intent extra value
+        val subName = intent.getStringExtra("name")
+        val subDesc = intent.getStringExtra("desc")
+        val subImage = intent.extras?.get("image")
 
+        this.title = subName
         exerciseImageView = findViewById(R.id.myExerciseIV)
         exerciseName = findViewById(R.id.myExerciseNameTV)
         exerciseDescription = findViewById(R.id.myExerciseDescriptionTV)
-
-
-        // Get the intent extra value
-        val subName = getIntent().getStringExtra("name")
-        val subDesc = getIntent().getStringExtra("desc")
-        val subImage = getIntent().extras?.get("image")
 
         exerciseName.text = subName
         exerciseDescription.text = subDesc

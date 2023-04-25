@@ -29,6 +29,7 @@ class PhotoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo)
+        this.title = "Upload a Photo"
 
         ivPreview = findViewById<ImageView>(R.id.photo_to_upload)
         findViewById<Button>(R.id.save_button).setOnClickListener {

@@ -45,6 +45,10 @@
             android:name=".PhotoActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
