@@ -11,6 +11,7 @@
     <string name="nutrition_nav_text">Nutrition</string>
     <string name="personal_nav_text">Personal</string>
     <string name="feed_nav_text">Feed</string>
+<<<<<<< HEAD
     <string name="exerciseNameDummyString">Jumping Jacks</string>
     <string name="exerciseDescDummyString">You jump around a lot. Back and forth. Whoo.</string>
     <string name="description">Description: </string>
@@ -35,4 +36,11 @@
     <string name="flexbody_gmail_com">flexbody@gmail.com</string>
     <string name="welcome_flexbodyuser">Welcome, FlexBodyUser!</string>
 
+=======
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_label">flexbodyapp</string>
+    <string name="search_hint">Food</string>
+    <string name="nutrition_hint">Search Nutrition Info</string>
+>>>>>>> f7be6fb (init search item)
 </resources>
