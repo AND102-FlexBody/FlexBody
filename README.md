@@ -138,6 +138,6 @@ FlexBody is a mobile fitness application that allows users to track exercise and
 
 Here's a walkthrough of implemented user stories:
 
-| Milestone #2: April 17, 2023 | Milestone #3: April 24, 2023 | Milestone #4: May 1, 2023 |
-| --- | --- | --- | 
-| <img src='milestone1_walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' width='200' />|  <img src='flexbody-milestone3.gif' title='Video Walkthrough 3' alt='Video Walkthrough 3' width='400' height='500' /> |  | 
+| Milestone #2: April 17, 2023 | Milestone #3: April 24, 2023 |
+| --- | --- | 
+| <img src='milestone1_walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' width='200' />|  <img src='flexbody-milestone3.gif' title='Video Walkthrough 3' alt='Video Walkthrough 3' width='200' /> |
